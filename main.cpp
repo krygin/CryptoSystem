@@ -70,58 +70,9 @@ int main(int argc, const char *argv[]) {
         decryptedData[i+1] = r2;
     }
 
-
     for (unsigned int i = 0; i < decryptedData.size(); i++) {
         std::cout << decryptedData[i];
     }
-
-//    unsigned int gamma = 0b1101100011101010;
-//
-//    unsigned char b1 = 0b10011010; // b1 = 154
-//    unsigned char b2 = 0b00111100; // b2 = 60
-//
-//    // xor
-//    // 01000010 11010110
-//    static_cast<unsigned int>(b1); // 0000000010011010
-//    static_cast<unsigned int>(b2); // 0000000000111100
-//
-//    static_cast<unsigned int>(b1) << 8; //1001101000000000
-//    static_cast<unsigned int>(b2); // 0000000000111100
-//
-//    (static_cast<unsigned int>(b1) << 8u) | static_cast<unsigned short>(b2); // 1001101000111100
-//
-//
-//    unsigned short message_xored_with_gamma =
-//            ((static_cast<unsigned int>(b1) << 8u) | static_cast<unsigned int>(b2)) ^gamma;
-//
-//    std::cout << 0b0100001011010110 << std::endl;
-//    std::cout << message_xored_with_gamma << std::endl;
-
-    // shift
-    // 0001011010110010
-    // 0001011010110*** | *************010
-
-//    unsigned short encrypted_block =
-//            (message_xored_with_gamma << leftShift) | message_xored_with_gamma >> (16 - leftShift);
-//    std::cout << 0b0001011010110010 << std::endl;
-//    std::cout << encrypted_block << std::endl;
-
-//    std::ifstream readFile;
-//    readFile.open("test", std::ios::binary);
-//
-//    std::vector<char> fileContents((std::istreambuf_iterator<char>(readFile)),
-//                                   std::istreambuf_iterator<char>());
-//    readFile.close();
-//
-//
-//
-//    for (unsigned int i = 0; i < fileContents.size(); i++) {
-//        std::cout << fileContents[i];
-//    }
-
-
-// 10010011 10111100 11110000 01010101 & 0xFFFF = 00000000 00000000 11110000 01010101
-// 10011101 11100111 10000010 10101100
 
     return 0;
 }
